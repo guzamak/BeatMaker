@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+i,svg{
+    /* คลิกเเล้ว target จะเป็นตัวเเม่ */
+    pointer-events: none;
+}
+
+
+/* pad */
+
+.pad{
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.kick-pad{
+    background-color:gainsboro;   
+}
+.snare-pad{
+    background-color: gainsboro;
+}
+.hihat-pad{
+    background-color: gainsboro;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+}
+.track > div{
+    display: flex;
+    align-items: center;
+}
+
+.hihat,.kick,.snare{
+    display: flex;
+}
+
+.sequencer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.controls{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 2rem;
+}
+.controls button{
+    background-color:black;
+    color:white;
+    padding: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+.pad{
+    transition: all 0.5 ease ;
+    opacity: 0.25;
+}
+.pad.active{
+    opacity: 1;
+}
+.play{
+    padding: 0.5rem 3rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 3rem;
+}
+select{
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: 1rem ;
+    width: 50%;
+}
+
+@keyframes playTrack {
+    from{
+        transform: scale(1);
+    }
+    to{
+         transform: scale(1.2);
+    }
+}
+.mute{
+    transition: all 0.25s ease;
+}
+.mute.active {
+    opacity: 0.5;
+}
+.tempo{
+    width: 30%;
+}
+.tempo-slider{
+    padding: 0.2rem ;
+    margin: 1rem 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    border-radius: 2rem;
+    -webkit-appearance: none ;
+}
